@@ -157,54 +157,55 @@ namespace ZWave
 
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            //
+            System.Console.WriteLine();
             level = 0x00; // Off
             message = new byte[] { 0x01, 0x09, 0x00, 0x13, nodeId, 0x03, 0x20, 0x01, level, 0x05, 0x00 };
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            /*
             //disable disco
             message = new byte[] { 0x01, 0x08, 0x00, 0xF2, 0x51, 0x01, 0x00, 0x05, 0x01, 0x51, 0x00 };
             //enable disco
             message = new byte[] { 0x01, 0x08, 0x00, 0xF2, 0x51, 0x01, 0x01, 0x05, 0x01, 0x50, 0x00 };
             // Test
             //message = new byte[] { 0x01, 0x25, 0x01, 0x02, 0x05, 0x08, 0x1d, 0x79, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
-            //
+            */
             // getHomeID
             message = new byte[] { 0x01,0x03,0x00,0x20,0x0 };
             System.Console.WriteLine();
             System.Console.WriteLine("Get home ID");
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            //
             // get Version
             message = new byte[] { 0x01, 0x03, 0x00, 0x15, 0x0 };
             System.Console.WriteLine();
             System.Console.WriteLine("Get version");
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            //
             // get Nodes
             message = new byte[] { 0x01, 0x03, 0x00, 0x2, 0x0 };
             System.Console.WriteLine();
             System.Console.WriteLine("Get nodes");
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            /*
             // get Interface Features
             message = new byte[] { 0x01, 0x03, 0x00, 0x05, 0x0 };
             System.Console.WriteLine();
             System.Console.WriteLine("Get Interface Features");
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            //
             // get Interface Api Capabilities
             message = new byte[] { 0x01, 0x03, 0x00, 0x07, 0x0 };
             System.Console.WriteLine();
             System.Console.WriteLine("Get Interface Api Capabilities");
             zp.SendMessage(message);
             Thread.Sleep(5000); // Wait for 5 seconds
-
+            */
             System.Console.ReadLine(); // Wait for the user to terminate the program
 
             zp.Close();
